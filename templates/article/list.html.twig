@@ -1,0 +1,15 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+<div>
+    <ul>
+        {%  for article in articles %}
+            <li>
+                <h1>{{ article.title }}</h1>
+                <article>{{ article.description }}</article>
+                <aside><a href="{{ path('blog_get', {'id': article.id}) }}">Link to article</a></aside>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}

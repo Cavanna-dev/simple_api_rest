@@ -1,0 +1,9 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <div>
+        <h1>{{ article.title }}</h1>
+        <article>{{ article.description }}</article>
+        <aside><a href="{{ path('blog_list') }}">Get back to all our juicy articles</a></aside>
+    </div>
+{% endblock %}
